@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "map-string",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Array.map for strings.",
+    "repository": "https://github.com/Richienb/map-string.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,13 +11,16 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=4"
     },
     "scripts": {
         "lint": "xo",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
+    "keywords": [
+        "map",
+        "string"
+    ],
     "dependencies": {},
     "devDependencies": {
         "ava": "^2.1.0",

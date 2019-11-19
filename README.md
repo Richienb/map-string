@@ -1,41 +1,39 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Map string [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/map-string/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/map-string)
 
-My awesome module.
+Array.map for strings.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/map-string.png)](https://npmjs.com/package/map-string)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install map-string
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const mapString = require("mapString");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+mapString("abcd", (val) => {
+    if (val === "b") return "!"
+    return val
+});
+//=> 'a!cd'
 ```
 
 ## API
 
-### theModule(input, options?)
+### mapString(string, iteratee)
 
-#### input
+#### string
 
 Type: `string`
 
-Lorem ipsum.
+The string to iterate.
 
-#### options
+#### iteratee
 
-Type: `object`
+Type: `function(value, index, string)`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The iteratee to use.

@@ -1,14 +1,18 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Array.map for strings.
+ * @param string The string to iterate.
+ * @param iteratee The iteratee to use.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const mapString = require("mapString");
+ *
+ * mapString("abcd", (val) => {
+ *     if (val === "b") return "!"
+ *     return val
+ * });
+ * //=> 'a!cd'
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function mapString<T extends string>(string: T, iteratee: (value: string, index: number, string: T) => any): string;
 
-export = theModule;
+export = mapString;
