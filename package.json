@@ -1,6 +1,6 @@
 {
     "name": "map-string",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Array.map for strings.",
     "repository": "https://github.com/Richienb/map-string.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
